@@ -1,4 +1,7 @@
 {
+  "name": "interview-cypress",
+  "version": "1.0.0",
+  "description": "Project for Cypress test automation interviews",
   "devDependencies": {
     "cypress": "^13.7.3"
   }
