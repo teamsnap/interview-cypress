@@ -12,3 +12,4 @@ Cypress Project for Test Automation Interviews
 2. Run `nvm use 20` to use the correct Node.js version
 3. Run `yarn install` to install the dependencies
 4. Run `yarn run cypress open` to open the Cypress Test Runner and run the tests
+5. Tests live within the cypress/e2e folder
