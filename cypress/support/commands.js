@@ -10,7 +10,16 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('login', (email, password) => {
+    cy.session([email, password], () => {
+        cy.visit('https://go.teamsnap.com/login/signin');
+        cy.get(':nth-child(2) > #login').type(email);
+        cy.get('#password').type(password);
+        cy.get('.btn').click();
+        cy.url().should('include', '/team/dashboard');
+    }
+    )
+});
 //
 //
 // -- This is a child command --
