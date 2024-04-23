@@ -17,7 +17,7 @@ Cypress Project for Test Automation Interviews
 ### Writing Cypress Tests
 
 1. All E2E Cypress tests will live underneath the cypress/e2e folder
-2. The cypress/e2e/spec.cy.js file is meant to be a placeholder test
+2. Add your test case to the `cypress/e2e/RepeatingEvents.spec.js` file. The test case that is there is a placeholder and should be replaced with your test case.
 3. See Google Document (Directions Section) for specific test instructions
 
 ### Running Cypress Tests
