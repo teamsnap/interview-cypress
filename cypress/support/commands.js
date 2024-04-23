@@ -7,9 +7,13 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-//
-//
-// -- This is a parent command --
+
+/**
+ * login command to login to the teamsnap website
+ * cy.session is used to store the email and password in the session storage
+ * @param {string} email - email address to login with
+ * @param {string} password - password to login with
+ */
 Cypress.Commands.add('login', (email, password) => {
   cy.session([email, password], () => {
     cy.visit('https://go.teamsnap.com/login/signin');
@@ -19,15 +23,3 @@ Cypress.Commands.add('login', (email, password) => {
     cy.url().should('include', '/team/dashboard');
   })
 });
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
